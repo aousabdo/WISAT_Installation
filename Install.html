@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Installing and Running IDA Web Applications</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Installing and Running IDA Web Applications</h1>
+
+<p>In order to run the IDA WISAT Apps on your machine, you need to install R and RStudio. In addition you need to install some R libraries. </p>
+
+<h2>Installing R</h2>
+
+<p>R is a free software available for UNIX, Linux, Mac OS, and Windows platforms.  </p>
+
+<ul>
+<li><a href="http://cran.r-project.org/bin/macosx/">Download R for Mac OS</a></li>
+<li><a href="http://cran.r-project.org/bin/windows/base/">Download R for Windows</a></li>
+</ul>
+
+<h2>Installing RStudio</h2>
+
+<p>RStudio provides an Integrated Development Environment (IDE) for R. This makes it easy to run and develop R programs.  </p>
+
+<p>Running IDA WISAT Apps on your local machine will require RStudio to be installed on the machine.<br/>
+You can download RStudio <a href="https://www.rstudio.com/ide/download/">here</a>. Please make sure to select the <strong>desktop</strong> version of RStudio. </p>
+
+<h2>Installing Required R Libraries</h2>
+
+<p>There are several R libraries that are needed to run the IDA WISAT apps. To install a library in R you can issue <code>install.packages(&quot;Library_name&quot;)</code> command from the command line in R or RStudio. For example, to install the library &ldquo;shiny&rdquo; you issue this command in R:  </p>
+
+<pre><code>install.packages(&quot;shiny&quot;)
+</code></pre>
+
+<p>To install more than one R package with one single command, you can concatenate the list of libraries ot be installed with the <code>c</code> commaned in R. 
+For example to install the libraries <code>ggplot2</code>, <code>shiny</code>, <code>plyr</code>, and <code>grid</code> you can issue the command:</p>
+
+<pre><code>install.packages(c(&quot;ggplot2&quot;, &quot;shiny&quot;, &quot;plyr&quot;, &quot;grid&quot;))
+</code></pre>
+
+<h3>One Step Installation</h3>
+
+<p>To install all needed R packages download this script file<br/>
+After downloading the file you need to run (source) the script in RStudio. To do this use the <code>source</code> command:</p>
+
+<pre><code>source(&quot;file_location/checkPackages.R&quot;)
+</code></pre>
+
+<p>Where the <code>file_location</code> is the file location/path on your machine. For example if the file is located in <code>/Users/asmith/Documents/R/</code> you need to issue the command:</p>
+
+<pre><code>source(&quot;/Users/asmith/Documents/R/checkPackage.R&quot;)
+</code></pre>
+
+<!--
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+
+When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+```r
+summary(cars)
+```
+
+```
+##      speed           dist    
+##  Min.   : 4.0   Min.   :  2  
+##  1st Qu.:12.0   1st Qu.: 26  
+##  Median :15.0   Median : 36  
+##  Mean   :15.4   Mean   : 43  
+##  3rd Qu.:19.0   3rd Qu.: 56  
+##  Max.   :25.0   Max.   :120
+```
+
+
+You can also embed plots, for example:
+
+
+```r
+plot(cars)
+```
+
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+
+
+-->
+
+</body>
+
+</html>
+
