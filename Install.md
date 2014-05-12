@@ -1,7 +1,7 @@
-Installing and Running WISAT Applications
+Installing and Running iSAT Applications
 ========================================================
 
-In order to run the WISAT Apps on your machine, you need to install R and RStudio. In addition you need to install some R libraries. 
+In order to run the iSAT Apps on your machine, you need to install R and RStudio. In addition you need to install some R libraries. 
 
 Installing R
 ------------
@@ -15,14 +15,14 @@ Installing RStudio
 ------------------
 RStudio provides an Integrated Development Environment (IDE) for R. This makes it easy to run and develop R programs.  
 
-Running the WISAT Apps on your local machine will require RStudio to be installed on the machine.  
+Running the iSAT Apps on your local machine will require RStudio to be installed on the machine.  
 You can download RStudio [here](https://www.rstudio.com/ide/download/). Please make sure to select the **desktop** version of RStudio. 
 
 
 Installing Required R Libraries
 -------------------------------
 
-There are several R libraries that are needed to run the WISAT apps. To install a library in R you can issue `install.packages("Library_name")` command from the command line in R or RStudio. For example, to install the library "shiny" you issue this command in R:  
+There are several R libraries that are needed to run the iSAT apps. To install a library in R you can issue `install.packages("Library_name")` command from the command line in R or RStudio. For example, to install the library "shiny" you issue this command in R:  
 
 ```
 install.packages("shiny")
