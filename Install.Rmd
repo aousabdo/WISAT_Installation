@@ -36,7 +36,7 @@ install.packages(c("ggplot2", "shiny", "plyr", "grid"))
 
 ### One Step Installation
 
-To install all needed R packages download this script file  
+To install all needed R packages download this [script file](https://github.com/aousabdo/WISAT_Installation/blob/master/checkPackage.R)  
 After downloading the file you need to run (source) the script in RStudio. To do this use the `source` command:
 
 ```
